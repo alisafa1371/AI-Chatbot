@@ -1,12 +1,28 @@
-# React + Vite
+# 🧠 AI Chatbot with Resume-Based Demo (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight and responsive chatbot built using React.js and Vite. It supports both free and paid AI models. In the demo version, the bot responds to questions based on a limited, predefined résumé of the developer.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔌 Support for multiple AI models (free and paid) via OpenRouter or other APIs
+- 📄 Demo mode: responds to questions about the developer based on sample résumé data
+- 📱 Fully responsive for mobile and desktop
+- ⚡ Powered by React + Vite
+- 🔧 Easily extensible for more advanced use cases
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> Feel free to ask the bot questions about the developer. It uses a limited amount of manually entered résumé data to generate responses.
+
+## 🛠️ Installation & Setup
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
+npm run dev
+```
+
+📄 License
+MIT License
+
+Made with ❤️ by Ali Safaeyan
