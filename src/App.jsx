@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import ChatbotIcon from "./components/ChatbotIcon";
 import ChatForm from "./components/ChatForm";
 import ChatMessage from "./components/ChatMessage";
-import { companyInfo } from "./CompanyInfo";
+import { myResume } from "./myResume";
 
 function App() {
   const [chatHistory, setChatHistory] = useState([
@@ -10,7 +10,7 @@ function App() {
     {
       hideInChat: true,
       role: "model",
-      text: companyInfo,
+      text: myResume,
     },
   ]);
   const [showChatbot, setShowChatbot] = useState(false);
