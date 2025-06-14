@@ -34,20 +34,16 @@ function App() {
     const requestOptions = {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         model: "deepseek/deepseek-r1-0528-qwen3-8b:free",
-        messages: messages,
+        messages,
       }),
     };
 
     try {
-      const response = await fetch(
-        "https://openrouter.ai/api/v1/chat/completions",
-        requestOptions
-      );
+      const response = await fetch("/api/chat", requestOptions);
       const data = await response.json();
 
       if (!response.ok)
