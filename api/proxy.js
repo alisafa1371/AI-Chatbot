@@ -15,6 +15,9 @@ export default async function handler(req, res) {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${process.env.VITE_OPENROUTER_KEY}`,
+          "HTTP-Referer":
+            req.headers.referer || "https://ai-chatbot-hnou.vercel.app",
+          "X-Title": "ai-chatbot-hnou",
         },
         body: JSON.stringify(req.body),
       }
