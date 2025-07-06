@@ -7,6 +7,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
+  console.log("in proxy,js ", process.env.VITE_OPENROUTER_KEY);
+
   try {
     const response = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
