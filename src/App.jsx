@@ -40,7 +40,6 @@ function App() {
     const requestOptions = {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
