@@ -14,8 +14,8 @@ function App() {
     },
   ]);
   const [showChatbot, setShowChatbot] = useState(false);
-  console.log("v-6");
   const chatBodyRef = useRef();
+  console.log("v.2.0");
 
   //Help function to update chat history
   const updateHistory = (text, isError) => {
