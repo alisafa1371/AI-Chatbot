@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   console.log("we are hereeee");
 
-  console.log("in proxy,js ", process.env.VITE_OPENROUTER_KEY);
+  console.log("in proxy,js ", process.env.OPENROUTER_KEY);
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.VITE_OPENROUTER_KEY}`,
+          Authorization: `Bearer ${process.env.OPENROUTER_KEY}`,
           "HTTP-Referer":
             req.headers.referer || "https://ai-chatbot-hnou.vercel.app",
           "X-Title": "ai-chatbot-hnou",
