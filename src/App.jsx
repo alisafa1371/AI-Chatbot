@@ -14,7 +14,7 @@ function App() {
     },
   ]);
   const [showChatbot, setShowChatbot] = useState(false);
-
+  console.log("v-6");
   const chatBodyRef = useRef();
 
   //Help function to update chat history
@@ -44,10 +44,7 @@ function App() {
     };
 
     try {
-      const response = await fetch(
-        "https://openrouter.ai/api/v1/chat/completions",
-        requestOptions
-      );
+      const response = await fetch("/api/proxy", requestOptions);
       const data = await response.json();
 
       if (!response.ok)
