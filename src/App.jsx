@@ -31,6 +31,12 @@ function App() {
       content: text,
     }));
 
+    console.log(import.meta.env.VITE_OPENROUTER_KEY);
+
+    console.log(env.VITE_OPENROUTER_KEY);
+
+    console.log(process.env.VITE_OPENROUTER_KEY);
+
     const requestOptions = {
       method: "POST",
       headers: {
