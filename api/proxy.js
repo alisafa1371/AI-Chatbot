@@ -1,4 +1,7 @@
 export default async function handler(req, res) {
+  console.log("we are hereeee");
+
+  console.log("in proxy,js ", process.env.VITE_OPENROUTER_KEY);
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -6,8 +9,6 @@ export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
-
-  console.log("in proxy,js ", process.env.VITE_OPENROUTER_KEY);
 
   try {
     const response = await fetch(
