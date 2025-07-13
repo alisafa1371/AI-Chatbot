@@ -44,7 +44,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://ai-chat-server-production-f9de.up.railway.app/chat",
+        "https://ai-chat-server-215w.onrender.com/chat",
         requestOptions
       );
       const data = await response.json();
