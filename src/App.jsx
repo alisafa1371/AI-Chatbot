@@ -25,6 +25,7 @@ function App() {
     ]);
   };
 
+  console.log(import.meta.env.VITE_OPENROUTER_KEY);
   const generateBotResponse = async (history) => {
     const messages = history.map(({ role, text }) => ({
       role: role === "model" ? "assistant" : "user",
