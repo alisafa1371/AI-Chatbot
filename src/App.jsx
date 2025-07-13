@@ -14,7 +14,7 @@ function App() {
     },
   ]);
   const [showChatbot, setShowChatbot] = useState(false);
-
+  console.log("running v.7");
   const chatBodyRef = useRef();
 
   //Help function to update chat history
@@ -25,7 +25,6 @@ function App() {
     ]);
   };
 
-  console.log(import.meta.env.VITE_OPENROUTER_KEY);
   const generateBotResponse = async (history) => {
     const messages = history.map(({ role, text }) => ({
       role: role === "model" ? "assistant" : "user",
@@ -35,7 +34,6 @@ function App() {
     const requestOptions = {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -46,7 +44,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://openrouter.ai/api/v1/chat/completions",
+        "https://ai-chat-server-production-f9de.up.railway.app/chat",
         requestOptions
       );
       const data = await response.json();
